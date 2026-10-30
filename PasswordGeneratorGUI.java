@@ -180,7 +180,7 @@ public class PasswordGeneratorGUI extends JFrame {
 
     private String deriveStrongPassword(String memorablePassword, int length)
             throws NoSuchAlgorithmException, InvalidKeySpecException {
-        byte[] salt = "COS738-StrongPasswordGenerator-UWC-v1".getBytes(StandardCharsets.UTF_8);
+        byte[] salt = "StrongPasswordGenerator".getBytes(StandardCharsets.UTF_8);
         // bytes needed: mapping (length) + forcing (4) + shuffling (length - 1) -> length * 2 + 8
         int bitLength = (length * 2 + 8) * 8;
 
@@ -244,7 +244,7 @@ public class PasswordGeneratorGUI extends JFrame {
         if (userSelection == JFileChooser.APPROVE_OPTION) {
             File targetFile = fileChooser.getSelectedFile();
             try (FileWriter writer = new FileWriter(targetFile, StandardCharsets.UTF_8)) {
-                writer.write("=== COS738 Cyber Security - Strong Password Output (Java) ===\n");
+                writer.write("=== Cyber Security - Strong Password Output (Java) ===\n");
                 if (chkIncludeMemorable.isSelected()) {
                     writer.write("Memorable Weak Password: " + memorable + "\n");
                 }
