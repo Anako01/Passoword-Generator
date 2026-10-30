@@ -6,11 +6,15 @@
 
 # How to run
 - Python (Python 3 with Tkinter):
-python password_gen.py
-
+   ```bash
+   python password_gen.py
+    ```
 - Java (JDK 11 or later):
-javac PasswordGeneratorGUI.java
-java PasswordGeneratorGUI
+   ```bash
+   javac PasswordGeneratorGUI.java
+   java PasswordGeneratorGUI
+    ```
+
 
 - HTML: double-click password_generator.html to open it in a web browser. 
 
