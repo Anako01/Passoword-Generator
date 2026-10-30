@@ -32,7 +32,7 @@ def derive_strong_password(memorable_password: str, length: int) -> str:
         raise ValueError("Desired password length must be at least 8 characters.")
 
     # Constant application salt for deterministic key derivation
-    salt = b"COS738-StrongPasswordGenerator-UWC-v1"
+    salt = b"StrongPasswordGenerator"
 
     # Derive pseudorandom byte stream using PBKDF2 with SHA-256 (200,000 iterations)
     derived_bytes = hashlib.pbkdf2_hmac(
